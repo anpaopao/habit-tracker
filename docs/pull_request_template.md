@@ -1,5 +1,4 @@
-|     Type      | Delete Branch? |  Merge?  |
-| :-----------: | :------------: | :------: |
-| Feature / Bug |    Yes / No    | Yes / No |
+Delete Branch?  
+Merge?          
 
 ## Comment
