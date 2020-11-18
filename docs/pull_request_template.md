@@ -1,4 +1,4 @@
-|Merge?|Delete Branch?|
-|:----:|:------------:|
-|      |              |
+| Merge? | Delete Branch? |
+|:------:|:--------------:|
+|       |               |
 ## Comment
