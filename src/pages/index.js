@@ -4,7 +4,6 @@ import 'normalize.css'
 import Habit from '../components/habit'
 
 const Wrapper = styled.div`
-  /* height: 50vh; */
   height: 100%;
   width: 50vw;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -55,12 +54,6 @@ const Wrapper = styled.div`
       width: 1em;
     }
   }
-  .habit-wrapper {
-    /* display: flex; */
-  }
-
-  Habbit {
-  }
 `
 export default function Home() {
   const [habits, setHabit] = useState([])
@@ -75,7 +68,6 @@ export default function Home() {
   return (
     <Wrapper>
       <form className="add-habit-form">
-        {/* when I click the button add habit to state */}
         <input
           type="text"
           name="habit"
