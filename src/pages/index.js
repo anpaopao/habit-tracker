@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import 'normalize.css'
+import Habit from '../components/habit'
 
 const Wrapper = styled.div`
-  height: 50vh;
+  /* height: 50vh; */
+  height: 100%;
   width: 50vw;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin: auto;
   grid-template-columns: 1;
   grid-template-rows: 2;
   display: flex;
-
+  flex-direction: column;
   .add-habit-form {
     display: flex;
     height: 50px;
@@ -54,7 +56,10 @@ const Wrapper = styled.div`
     }
   }
   .habit-wrapper {
-    display: flex;
+    /* display: flex; */
+  }
+
+  Habbit {
   }
 `
 export default function Home() {
@@ -63,10 +68,7 @@ export default function Home() {
 
   function addHabit(e) {
     e.preventDefault()
-
     setHabit(habits => [...habits, tempHabit])
-    // console.log('tempHabit', tempHabit)
-    console.log('habit', habits)
     settempHabit('')
   }
 
@@ -84,9 +86,9 @@ export default function Home() {
         <input type="submit" onClick={addHabit} />
       </form>
       <div className="habit-wrapper">
-        {/* {habits.map(habit => (
-          <Habit name={habit} streak={1} />
-        ))} */}
+        {habits.map(habit => (
+          <Habit name={habit} incrBy={1} />
+        ))}
       </div>
     </Wrapper>
   )
