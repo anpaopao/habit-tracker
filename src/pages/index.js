@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import 'normalize.css'
 import Habit from '../components/habit'
+import useForm from '../utils/useForm'
+
+// have a look at formik for dealing with forms in react
 
 const Wrapper = styled.div`
   height: 100%;
@@ -56,13 +59,16 @@ const Wrapper = styled.div`
   }
 `
 export default function Home() {
-  const [habits, setHabit] = useState([])
-  const [tempHabit, settempHabit] = useState('')
+  const [habits, setHabits] = useState([])
 
+  const { values, updateValue } = useForm({
+    name: '',
+  })
+  console.log(values.name)
   function addHabit(e) {
     e.preventDefault()
-    setHabit(habits => [...habits, tempHabit])
-    settempHabit('')
+    setHabits(habits => [...habits, values])
+    values.name = ''
   }
 
   return (
@@ -72,12 +78,13 @@ export default function Home() {
           type="text"
           name="habit"
           default="enter your habit name here"
-          onChange={e => settempHabit(e.target.value)}
-          value={tempHabit}
+          onChange={e => updateValue(e.target.value)}
+          value={values.name}
         ></input>
         <input type="submit" onClick={addHabit} />
       </form>
       <div className="habit-wrapper">
+        {/* add a key prop */}
         {habits.map(habit => (
           <Habit name={habit} incrBy={1} />
         ))}
