@@ -19,7 +19,6 @@ export default function useHabits() {
     ])
   }
 
-  // 4. send this data the serverless funtion when they checkout
   return {
     habits,
     addToHabits,

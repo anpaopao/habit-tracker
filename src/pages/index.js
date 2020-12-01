@@ -68,9 +68,8 @@ const initialHabitState = {
 }
 
 export default function Home() {
-  // const [habits, setHabits] = useState([]) //make this a custom hook that
   const { values: habit, updateValue: updateHabit, reset: resetHabit } = useForm(initialHabitState)
-  const { habits, addToHabits, removeFromHabits } = useHabits([]) // { habits, inputs: habit } use this as param maybe
+  const { habits, addToHabits, removeFromHabits } = useHabits([])
 
   // use these to remove the styling after one item has been added
   const nameInputRef = useRef(),
