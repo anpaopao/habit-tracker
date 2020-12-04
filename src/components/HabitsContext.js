@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-// create an order context
+// create a habits context
 const HabitsContext = React.createContext()
 
 export function HabitsProvider({ children }) {
