@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
 import 'normalize.css'
-import Habit from '../components/habit'
+import Habit from '../components/Habit'
 import useForm from '../utils/useForm'
 import useHabits from '../utils/useHabits'
 
 // TODO have a look at formik for dealing with forms in react
-// TODO figure out how to remove the required styling from form inputs after a habit has been added and the inputs are cleared setCustomValidity('')on the input element doesn't seem to work...
+// TODO save habits to local storage and load them into context
 
 const Wrapper = styled.div`
   height: 100%;
@@ -58,6 +58,9 @@ const Wrapper = styled.div`
       height: 0.2em;
       width: 1em;
     }
+  }
+  input:required {
+    box-shadow: none;
   }
 `
 
