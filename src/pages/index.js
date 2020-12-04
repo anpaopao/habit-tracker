@@ -6,7 +6,6 @@ import useForm from '../utils/useForm'
 import useHabits from '../utils/useHabits'
 
 // TODO have a look at formik for dealing with forms in react
-// TODO add useContext
 // TODO save habits to local storage and load them into context
 
 const Wrapper = styled.div`
