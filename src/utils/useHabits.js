@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import HabitsContext from '../components/HabitsContext'
 // replace temp param
 export default function useHabits() {
   // create some state to hold our Habits
-  const [habits, setHabits] = useState([])
+  const [habits, setHabits] = useContext(HabitsContext)
 
   // 2. make a function to add things to Habits
   function addToHabits(habit) {
